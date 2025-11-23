@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos Clásicos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Juegos Clásicos </h1>
+            <p>Disfruta de dos juegos divertidos y desafiantes</p>
+        </header>
+        
+        <div class="description">
+            <p>Elige entre el clásico juego de Piedra, Papel, Tijera o el desafiante juego del Ahorcado. Ambos juegos te permiten competir contra la computadora y demostrar tus habilidades.</p>
+        </div>
+        
+        <div class="games-container">
+            <div class="game-card" id="ppt-card">
+                <h2>Piedra, Papel, Tijera</h2>
+                <p>El clásico juego de manos</p>
+                <button class="btn" id="ppt-btn">Jugar</button>
+            </div>
+            
+            <div class="game-card" id="hangman-card">
+                <h2>Ahorcado</h2>
+                <p>Adivina la palabra letra por letra antes de que se complete el dibujo del ahorcado.</p>
+                <button class="btn" id="hangman-btn">Jugar</button>
+            </div>
+        </div>
+        
+        <!-- Juego de Piedra, Papel, Tijera -->
+        <div class="game-area" id="ppt-game">
+            <div class="game-header">
+                <h2>Piedra, Papel, Tijera</h2>
+                <button class="btn back-btn" id="ppt-back">Volver al Menú</button>
+            </div>
+            
+            <div class="choices">
+                <div class="choice" data-choice="rock">✊</div>
+                <div class="choice" data-choice="paper">✋</div>
+                <div class="choice" data-choice="scissors">✌️</div>
+            </div>
+            
+            <div class="result" id="ppt-result"></div>
+            
+            <div class="score">
+                <div>
+                    <h3>Jugador</h3>
+                    <p id="player-score">0</p>
+                </div>
+                <div>
+                    <h3>Computadora</h3>
+                    <p id="computer-score">0</p>
+                </div>
+            </div>
+            
+            <button class="btn reset-btn" id="ppt-reset">Reiniciar Juego</button>
+        </div>
+        
+        <!-- Juego del Ahorcado -->
+        <div class="game-area" id="hangman-game">
+            <div class="game-header">
+                <h2>Ahorcado</h2>
+                <button class="btn back-btn" id="hangman-back">Volver al Menú</button>
+            </div>
+            
+            <div class="hangman-drawing" id="hangman-drawing"></div>
+            
+            <div class="word-display" id="word-display"></div>
+            
+            <div class="message" id="hangman-message"></div>
+            
+            <div class="keyboard" id="keyboard"></div>
+            
+            <button class="btn reset-btn" id="hangman-reset">Nueva Palabra</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
